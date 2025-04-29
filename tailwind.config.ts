@@ -63,12 +63,13 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Fast food theme colors
-				brand: {
-					red: '#D72323',
-					yellow: '#FFC107',
-					darkGray: '#333333',
-					lightGray: '#F5F5F5'
+				// Mountain Kebab theme colors
+				mountain: {
+					black: '#121212',
+					darkGray: '#2A2A2A',
+					gray: '#6E6E6E',
+					lightGray: '#E0E0E0',
+					white: '#F9F9F9'
 				}
 			},
 			borderRadius: {
@@ -102,15 +103,66 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'reveal': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-in': {
+					from: {
+						transform: 'translateX(-100%)'
+					},
+					to: {
+						transform: 'translateX(0)'
+					}
+				},
+				'rotate-in': {
+					from: {
+						opacity: '0',
+						transform: 'rotateX(-10deg)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'rotateX(0)'
+					}
+				},
+				'pulse-soft': {
+					'0%, 100%': {
+						transform: 'scale(1)'
+					},
+					'50%': {
+						transform: 'scale(1.05)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.5s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				'reveal': 'reveal 0.8s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'rotate-in': 'rotate-in 0.6s ease-out',
+				'pulse-soft': 'pulse-soft 2s infinite ease-in-out'
 			},
 			fontFamily: {
-				sans: ['"Nunito"', 'sans-serif']
+				sans: ['"Nunito"', 'sans-serif'],
+				display: ['"Bebas Neue"', 'sans-serif'],
+				body: ['"Inter"', 'sans-serif']
+			},
+			backgroundImage: {
+				'concrete-texture': "url('https://images.unsplash.com/photo-1565366896067-3e7b52d395e2?q=80&w=1000')",
+				'mountain-pattern': "url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1000')"
+			},
+			boxShadow: {
+				'brutal': '4px 4px 0px rgba(0, 0, 0, 1)',
+				'brutal-sm': '2px 2px 0px rgba(0, 0, 0, 1)',
+				'brutal-lg': '6px 6px 0px rgba(0, 0, 0, 1)'
 			}
 		}
 	},
